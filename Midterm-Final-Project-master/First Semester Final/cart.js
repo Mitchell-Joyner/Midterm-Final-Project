@@ -13,10 +13,19 @@ class Cart{
         let item = (this.itemList[x].price)*this.itemQuantity[x];
         total = total + item;
         return total;
+        }
     };
     subCart(d){
-        subCart = [];
-        for(let x = 0; x<this.List.length: x++){
+        let subCart = new Cart([],[]);
+        for(let x = 0; x<this.List.length; x++){
             if(this.itemList[x].shipping == d){
-                subcart.push(this.itemList[x].name);
+                subcart.itemList.push(this.itemList[x].name);
+                subcart.itemQuantity.push(this.itemQuantity[x]);
             }
+            else{
+                console.log("Your search has yielded no results.")
+            }
+        }
+        return subCart;
+    }
+}

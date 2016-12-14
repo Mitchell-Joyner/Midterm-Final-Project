@@ -1,8 +1,14 @@
 class Password{
-  //The first part of the class.
+    constructor(){
+        this.publickey = publickey;
+        this.privatekey = privatekey;
+    }
+    validPublicKey(){
+    let key = this.publickey;
+    if(key.length >= 8 && key.length <= 25){
 
-
-
+    }
+    }
   //Instance functions below this comment.
 
 
