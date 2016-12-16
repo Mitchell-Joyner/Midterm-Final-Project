@@ -12,14 +12,31 @@ class Password{
       return false;
     }
   }
+    validPrivateKey(){
+        let pkey = this.privatekey
+        if(pkey.charAt(4) != '-' || pkey.charAt(9) != '-'){
+            return false;
+            console.log(false);
+        }
+        else if
+        else{
+            return true;
+            console.log(true);
+        }
+    }
     static makePrivateKey(){
       let key = '';
       let limit = 14;
       for(let x=0; x<limit; x++){
-        key = String(Math.floor(Math.random()*10));
-      }
-      console.log(key);
+          if(x == 4 || x == 9){
+              key += '-';
+          }
+          else{
+        key += String(Math.floor(Math.random()*10));
+        }
     }
-  }
-  let wtf = new Password('aaaaaaaaaaaaaa');
-  Password.makePrivateKey();
+console.log(key);
+    }
+}
+let Angery = new Password('xxxxxxxxxxxxxx','1234-1234-1234');
+Password.makePrivateKey();
